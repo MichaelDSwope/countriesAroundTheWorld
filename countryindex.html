@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Selection</title>
+</head>
+<body>
+    <h1>Select a Country:</h1>
+    <select id="countrySelect">
+        <option value="usa">USA</option>
+        <option value="germany">Germany</option>
+        <option value="japan">Japan</option>
+        <option value="france">Japan</option>
+        <option value="canada">Japan</option>
+    
+        <!-- Add more countries as needed -->
+    </select>
+    
+
+    <p>You selected: <span id="selectedCountry"></span></p>
+
+    <script>
+
+        var countrySelect = document.getElementById("countrySelect");
+
+        var selectedCountry = document.getElementById("selectedCountry");
+
+        // Add an event listener to the select element to handle changes
+        countrySelect.addEventListener("change", function() {
+
+            var selectedOption = countrySelect.options[countrySelect.selectedIndex];
+            var selectedValue = selectedOption.value;
+
+            // Display the selected country
+            clickMeButton.addEventListener(`click`,(e)=>{alert(`You clicked me!`)});
+            selectedCountry.textContent = selectedOption.text;
+        });
+    </script>
+    
+    
+    
+</body>
+
+</html>
